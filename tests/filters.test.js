@@ -33,4 +33,26 @@ describe('filter', () => {
             }
         ]);
     });
+
+    test('zz should return an empty array', () => {
+        expect(logic.filter('zz')).toMatchObject([]);
+    });
+
+    const dataSet = [
+        [],
+        {},
+        1,
+        "",
+        null,
+        undefined,
+        NaN,
+        true,
+        false,
+        () => {},
+    ];
+
+
+    test.each(dataSet)('%p should throw an error', (data) => {
+        expect(() => logic.filter(data)).toThrow();
+    });
 });

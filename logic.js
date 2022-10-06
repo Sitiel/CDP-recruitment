@@ -8,6 +8,13 @@ const countries = require('./data')['data'];
  * @returns An array of countries with people with animals that match the letters.
  */
  function filter(letters) {
+    if(typeof letters !== 'string') {
+        throw new Error('Letters must be a string');
+    }
+    if(letters.length === 0) {
+        throw new Error('Letters must not be empty');
+    }
+    
     for(let i = 0; i < countries.length; i++) {
         for(let j = 0; j < countries[i].people.length; j++) {
 
