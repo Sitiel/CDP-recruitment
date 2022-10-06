@@ -1,0 +1,16 @@
+{
+    "name": "cdp-recruitment-valerian",
+    "version": "1.0.0",
+    "description": "A command line interface javascript test",
+    "main": "app.js",
+    "scripts": {
+      "test": "jest"
+    },
+    "keywords": [
+      "javascript",
+      "test"
+    ],
+    "author": "Valérian ACIER",
+    "license": "ISC"
+  }
+  
