@@ -4,7 +4,7 @@
 
  const countries = require('./data')['data'];
 
- function getCountries() {
+ const getCountries = () => {
      return countries;
  }
  

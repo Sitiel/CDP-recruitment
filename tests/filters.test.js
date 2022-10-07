@@ -1,10 +1,10 @@
 
-const logic = require('../logic');
+const {filter} = require('../logic');
 
 describe('filter', () => {
 
     test('ry should return John Dory and Oryx', () => {
-        expect(logic.filter('ry')).toMatchObject([
+        expect(filter('ry')).toMatchObject([
             {
             name: 'Uzuzozne',
             people: [
@@ -35,7 +35,7 @@ describe('filter', () => {
     });
 
     test('zz should return an empty array', () => {
-        expect(logic.filter('zz')).toMatchObject([]);
+        expect(filter('zz')).toMatchObject([]);
     });
 
     const dataSet = [
@@ -53,6 +53,6 @@ describe('filter', () => {
 
 
     test.each(dataSet)('%p should throw an error', (data) => {
-        expect(() => logic.filter(data)).toThrow();
+        expect(() => filter(data)).toThrow();
     });
 });
