@@ -55,7 +55,10 @@ describe('count', () => {
         let countedData = count(dataService);
         expect(countedData[0].name).toMatch('Dillauti [5]');
         expect(countedData[0].people[0].name).toMatch('Winifred Graham [6]');
+        expect(countedData[0].people[0].animals[0].name).toMatch('Anoa');
         expect(countedData[0].people[1].name).toMatch('Blanche Viciani [8]');
     });
+
+
 });
 

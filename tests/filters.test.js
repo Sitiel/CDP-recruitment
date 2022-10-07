@@ -34,8 +34,8 @@ describe('filter', () => {
         ]);
     });
 
-    test('zz should return an empty array', () => {
-        expect(filter('zz')).toMatchObject([]);
+    test('should return an empty array if no match found', () => {
+        expect(filter('SHOULD NOT MATCH')).toMatchObject([]);
     });
 
     const dataSet = [
